@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root{
+  --accent: #FED766;
+  --dark: #252A30;
+}
+
+/* container helper */
+.container { @apply mx-auto px-4 max-w-6xl; }
+
+/* small utilities */
+.hero-overlay{
+  background: linear-gradient(180deg, rgba(0,0,0,0.4), rgba(0,0,0,0.6));
+}
+
+html {
+  scroll-behavior: smooth;
+}
