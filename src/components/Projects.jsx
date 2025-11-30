@@ -4,25 +4,30 @@ import LearningProjectsModal from "./LearningProjectsModal";
 
 const projects = [
   {
-    title: "Early Bird Clothing",
-    role: "Full Stack Developer",
-    desc: "Online clothing store with modern UI, cart, and payment integration.",
-    img: "/img/earlybird.png",
-    link: "http://earlybird-clothing.000webhostapp.com/",
+    title: "NETFLIX CLONE",
+    role: "Learning Project",
+    technology : "React",
+    desc: "Created Netflix Clone, which look same as netflix website.",
+    img: "/img/netflix-clone.png",
+    link: "https://netflix-akshaypatel20.web.app/",
+    repo: "https://github.com/AkshayPatel20/netflix-clone"
   },
   {
-    title: "NMITD College App",
-    role: "Full Stack Developer",
-    desc: "College app with syllabus, notice board, and student resources.",
-    img: "/img/nmitd-apps.png",
-    link: "https://drive.google.com/open?id=1IKYMfxE72GIvs6T-I4VRKJlL4ca2ye27",
+    title: "Life Ease",
+    role: "Daily Use",
+    technology : "React",
+    desc: "Created this site to complete daily task which make my life ease",
+    img: "/img/life-ease.png",
+    link: "https://caseconverter-akshaypatel20.web.app/",
   },
   {
-    title: "ASRK Music",
-    role: "Full Stack Developer",
-    desc: "Online music platform to stream and share songs.",
-    img: "/img/asr-music.png",
-    link: "http://asrk-music.000webhostapp.com",
+    title: "TIC TAC TOE",
+    role: "GAME",
+    technology : "Angular",
+    desc: "Created this game for angular learning purpose.Play and enjoy.",
+    img: "/img/tick-toe.png",
+    link: "https://akshaypatel20.github.io/tic-tac-toe-game/",
+    repo: 'https://github.com/AkshayPatel20/tic-tac-toe-game'
   },
 ];
 
@@ -46,12 +51,12 @@ export default function Projects() {
         className="text-center text-gray-400 mb-14 text-lg"
       >
         Want to see more examples?{" "}
-        <button
+        {/* <button
           onClick={() => setOpenModal(true)}
           className="text-yellow-500 font-semibold underline mr-3 hover:text-yellow-400"
         >
           View Learning Projects →
-        </button>
+        </button> */}
         <a
           href="mailto:patelakshay55@gmail.com"
           className="text-yellow-500 font-semibold underline hover:text-yellow-400"
@@ -102,30 +107,58 @@ export default function Projects() {
                 {p.title}
               </h3>
 
-              <span
-                className="text-sm bg-yellow-400 text-black font-semibold 
-                px-4 py-1 rounded-full shadow-md inline-block w-fit mb-3"
-              >
-                {p.role}
-              </span>
+              <div className="flex gap-3">
+                <span
+                  className="text-sm bg-yellow-400 text-black font-semibold 
+                  px-4 py-1 rounded-full shadow-md inline-block w-fit mb-3"
+                >
+                  {p.role}
+                </span>
+                  <span
+                  className="text-sm bg-yellow-400 text-black font-semibold 
+                  px-4 py-1 rounded-full shadow-md inline-block w-fit mb-3"
+                >
+                  {p.technology}
+                </span>
+              </div>
 
               <p className="text-gray-200 mb-4 text-sm leading-relaxed">
                 {p.desc}
               </p>
 
-              <a
-                href={p.link}
-                target="_blank"
-                rel="noreferrer"
-                className="
-                  inline-block px-6 py-2.5 rounded-xl font-bold 
-                  bg-gradient-to-r from-yellow-300 to-yellow-500 
-                  text-black shadow-lg hover:shadow-yellow-400/40 
-                  hover:-translate-y-1 transition-all duration-300
-                "
-              >
-                Visit Project
-              </a>
+              <div className="flex gap-3">
+                <a
+                  href={p.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="
+                    inline-block px-6 py-2.5 rounded-xl font-bold 
+                    bg-gradient-to-r from-yellow-300 to-yellow-500 
+                    text-black shadow-lg hover:shadow-yellow-400/40 
+                    hover:-translate-y-1 transition-all duration-300
+                  "
+                >
+                  View
+                </a>
+
+                {p.repo && (
+                  <a
+                  href={p.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="
+                    inline-block px-6 py-2.5 rounded-xl font-bold 
+                    bg-gradient-to-r from-yellow-300 to-yellow-500 
+                    text-black shadow-lg hover:shadow-yellow-400/40 
+                    hover:-translate-y-1 transition-all duration-300
+                  "
+                >
+                  Repo
+                </a>
+                )}
+
+              </div>
+
             </div>
           </motion.div>
         ))}
